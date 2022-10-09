@@ -3,11 +3,11 @@
 # пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
 
 
-def InputNumbers(inputText):
+def Inp_num(text):
     is_OK = False
     while not is_OK:
         try:
-            number = int(input(f"{inputText}"))
+            number = int(input(f"{text}"))
             is_OK = True
         except ValueError:
             print("Введите целое число(int)")
@@ -21,7 +21,7 @@ def mult(n):
         return n * mult(n - 1)
 
 
-num = InputNumbers("Введите число N = ")
+num = Inp_num("Введите число N = ")
 
 list = []
 for i in range(1, num + 1):
